@@ -16,9 +16,17 @@ class Dijkstra(object):
         goalを引数に持つ場合，startからgoalまでの最短経路を格納したリストを返す
         持たない場合は，startから各頂点までの最短距離を格納したリストを返す
         >>> d = Dijkstra()
-        >>> d.dijkstra([[float('inf'), 2, 4, float('inf'), float('inf')], [2, float('inf'), 3, 5, float('inf')], [4, 3, float('inf'), 1, 4], [float('inf'), 5, 1, float('inf'), 3], [float('inf'), float('inf'), 4, 3, float('inf')]], 0)
+        >>> d.dijkstra([[float('inf'), 2, 4, float('inf'), float('inf')],
+                        [2, float('inf'), 3, 5, float('inf')],
+                        [4, 3, float('inf'), 1, 4],
+                        [float('inf'), 5, 1, float('inf'), 3],
+                        [float('inf'), float('inf'), 4, 3, float('inf')]], 0)
         [0, 2, 4, 5, 8] # 例えば，始点0から頂点3までの最短距離は5となる
-        >>> d.dijkstra([[float('inf'), 2, 4, float('inf'), float('inf')], [2, float('inf'), 3, 5, float('inf')], [4, 3, float('inf'), 1, 4], [float('inf'), 5, 1, float('inf'), 3], [float('inf'), float('inf'), 4, 3, float('inf')]], 0, goal=4)
+        >>> d.dijkstra([[float('inf'), 2, 4, float('inf'), float('inf')],
+                        [2, float('inf'), 3, 5, float('inf')],
+                        [4, 3, float('inf'), 1, 4],
+                        [float('inf'), 5, 1, float('inf'), 3],
+                        [float('inf'), float('inf'), 4, 3, float('inf')]], 0, goal=4)
         [0, 2, 4] # 頂点0から頂点4までの最短経路は0 -> 2 -> 4となる
         '''
         num = len(adj)
